@@ -11,6 +11,14 @@
   display: block;
 }
 
+.footer_disclaimer {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border: 1px solid #fff;
+}
+
 @media screen and (max-width: 749px) {
   .footer .grid {
     display: block;
