@@ -2,7 +2,7 @@
   "current": {
     "colors_solid_button_labels": "#FFFFFF",
     "colors_accent_1": "#3c7031",
-    "colors_accent_2": "#d6e2d0",
+    "colors_accent_2": "#3c7031",
     "colors_text": "#121212",
     "colors_outline_button_labels": "#121212",
     "colors_background_1": "#FFFFFF",
@@ -44,7 +44,6 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo": "shopify:\/\/shop_images\/pop-logo-side-text_ba5da08f-33a6-434e-a58a-14f53abe5f76.png",
           "logo_width": 250,
           "logo_position": "middle-left",
           "menu": "main-menu",
