@@ -12,7 +12,7 @@
     "gradient_background_2": "linear-gradient(46deg, rgba(232, 235, 226, 1), rgba(232, 235, 226, 1) 100%)",
     "type_header_font": "alegreya_n7",
     "type_body_font": "montserrat_n4",
-    "spacing_sections": 60,
+    "spacing_sections": 48,
     "spacing_grid_vertical": 8,
     "inputs_border_opacity": 55,
     "inputs_shadow_opacity": 0,
