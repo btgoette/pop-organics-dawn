@@ -12,6 +12,8 @@
     "card_style": "standard",
     "card_border_thickness": 0,
     "media_border_thickness": 0,
+    "badge_position": "top right",
+    "badge_corner_radius": 0,
     "badge_sale_color_scheme": "accent-1",
     "social_twitter_link": "https:\/\/twitter.com\/HolisticJohnson?fbclid=IwAR2uYxJyEIDktPtLBoxoe4F2kPFUn1IhlFolztiTNCYRM-O52rj_yk0WmPU",
     "social_facebook_link": "https:\/\/www.facebook.com\/jjholisticnutritionaltherapy\/",
