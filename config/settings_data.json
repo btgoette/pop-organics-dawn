@@ -59,21 +59,29 @@
           "footer-1": {
             "type": "text",
             "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+              "heading": "P.O.P. Organics",
+              "subtext": "<p>4645 Avon Ln, Suite 300<br\/>Frisco, TX 75033, USA<br\/><a href=\"tel:18006343363\">+1 800 634 3363<\/a><br\/><a href=\"mailto:support@jjholistichealth.com\">support@jjholistichealth.com<\/a><\/p>"
             }
           },
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "Catalog",
+              "menu": "categories"
+            }
+          },
+          "0f14c81c-c01b-4bf2-81ea-9f0774a78583": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Information",
+              "menu": "policy-menu"
             }
           }
         },
         "block_order": [
           "footer-1",
-          "footer-0"
+          "footer-0",
+          "0f14c81c-c01b-4bf2-81ea-9f0774a78583"
         ],
         "settings": {
           "color_scheme": "accent-1",
