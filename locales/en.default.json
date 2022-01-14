@@ -230,6 +230,7 @@
       "remove_title": "Remove {{ title }}",
       "subtotal": "Subtotal",
       "new_subtotal": "New subtotal",
+      "gift": "Add a Gift Message",
       "note": "Order special instructions",
       "checkout": "Check out",
       "empty": "Your cart is empty",

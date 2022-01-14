@@ -7,69 +7,101 @@
   <div>
     <div class="cart__footer">
       {%- if section.settings.show_cart_note -%}
-        <cart-note class="cart__note field">
+      <!-- <cart-note class="cart__note field">
           <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
           <textarea class="text-area text-area--resize-vertical field__input" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
-        </cart-note>
+        </cart-note> -->
+
+      <!-- Custom Cart Message -->
+      <div class="cart-attribute__field">
+        <label class="cart__gift__title">{{ 'sections.cart.gift' | t }}</label>
+        <select form="cart" id="gift-card-type" class="select cart__gift__type" name="attributes[Gift Card Type]">
+          <option value="Blank Card" {% if cart.attributes[""]=="Blank Card" %} selected{% endif %}>Blank Card</option>
+          <option value="No Card" {% if cart.attributes[""]=="No Card" %} selected{% endif %}>No Card</option>
+          <option value="Birthday" {% if cart.attributes[""]=="Birthday" %} selected{% endif %}>Birthday</option>
+          <option value="Sympathy" {% if cart.attributes[""]=="Sympathy" %} selected{% endif %}>Sympathy</option>
+          <option value="Funeral" {% if cart.attributes[""]=="Funeral" %} selected{% endif %}>Funeral</option>
+          <option value="I Love You" {% if cart.attributes[""]=="I Love You" %} selected{% endif %}>I Love You</option>
+          <option value="Valentine's Day" {% if cart.attributes[""]=="Valentine's Day" %} selected{% endif %}>
+            Valentine's
+            Day</option>
+          <option value="Get Well" {% if cart.attributes[""]=="Get Well" %} selected{% endif %}>Get Well</option>
+          <option value="Just Because" {% if cart.attributes[""]=="Just Because" %} selected{% endif %}>Just Because
+          </option>
+          <option value="Thank You" {% if cart.attributes[""]=="Thank You" %} selected{% endif %}>Thank You</option>
+          <option value="Congratulations" {% if cart.attributes[""]=="Congratulations" %} selected{% endif %}>
+            Congratulations</option>
+          <option value="Anniversary" {% if cart.attributes[""]=="Anniversary" %} selected{% endif %}>Anniversary
+          </option>
+          <option value="Missing You" {% if cart.attributes[""]=="Missing You" %} selected{% endif %}>Missing You
+          </option>
+          <option value="New Baby" {% if cart.attributes[""]=="New Baby" %} selected{% endif %}>New Baby</option>
+          <option value="Other" {% if cart.attributes[""]=="Other" %} selected{% endif %}>Other</option>
+        </select>
+
+        <textarea form="cart" id="gift-message" class="text-area text-area--resize-vertical cart__gift__message" placeholder="Enter Gift Message Here"
+          name="attributes[Gift Message]">{{ cart.attributes["Gift Message"] }}</textarea>
+      </div>
       {%- endif -%}
 
       <div class="cart__blocks">
         {% for block in section.blocks %}
-          {%- case block.type -%}
-            {%- when '@app' -%}
-              {% render block %}
-            {%- when 'subtotal' -%}
-              <div class="js-contents" {{ block.shopify_attributes }}>
-                <div class="totals">
-                  <h3 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h3>
-                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
-                </div>
+        {%- case block.type -%}
+        {%- when '@app' -%}
+        {% render block %}
+        {%- when 'subtotal' -%}
+        <div class="js-contents" {{ block.shopify_attributes }}>
+          <div class="totals">
+            <h3 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h3>
+            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+          </div>
 
-                <div>
-                  {%- if cart.cart_level_discount_applications.size > 0 -%}
-                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                      {%- for discount in cart.cart_level_discount_applications -%}
-                        <li class="discounts__discount discounts__discount--position">
-                          {%- render 'icon-discount' -%}
-                          {{ discount.title }}
-                          (-{{ discount.total_allocated_amount | money }})
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-                </div>
+          <div>
+            {%- if cart.cart_level_discount_applications.size > 0 -%}
+            <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+              {%- for discount in cart.cart_level_discount_applications -%}
+              <li class="discounts__discount discounts__discount--position">
+                {%- render 'icon-discount' -%}
+                {{ discount.title }}
+                (-{{ discount.total_allocated_amount | money }})
+              </li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </div>
 
-                <small class="tax-note caption-large rte">
-                  {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
-                    {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                  {%- elsif cart.taxes_included -%}
-                    {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
-                  {%- elsif shop.shipping_policy.body != blank -%}
-                    {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
-                  {%- else -%}
-                    {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
-                  {%- endif -%}
-                </small>
-              </div>
+          <small class="tax-note caption-large rte">
+            {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+            {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+            {%- elsif cart.taxes_included -%}
+            {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+            {%- elsif shop.shipping_policy.body != blank -%}
+            {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
             {%- else -%}
-              <div class="cart__ctas" {{ block.shopify_attributes }}>
-                <noscript>
-                  <button type="submit" class="cart__update-button button button--secondary" form="cart">
-                    {{ 'sections.cart.update' | t }}
-                  </button>
-                </noscript>
+            {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+            {%- endif -%}
+          </small>
+        </div>
+        {%- else -%}
+        <div class="cart__ctas" {{ block.shopify_attributes }}>
+          <noscript>
+            <button type="submit" class="cart__update-button button button--secondary" form="cart">
+              {{ 'sections.cart.update' | t }}
+            </button>
+          </noscript>
 
-                <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
-                  {{ 'sections.cart.checkout' | t }}
-                </button>
-              </div>
+          <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout" {% if cart==empty %}
+            disabled{% endif %} form="cart">
+            {{ 'sections.cart.checkout' | t }}
+          </button>
+        </div>
 
-              {%- if additional_checkout_buttons -%}
-                <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
-                  {{ content_for_additional_checkout_buttons }}
-                </div>
-              {%- endif -%}
-          {%- endcase -%}
+        {%- if additional_checkout_buttons -%}
+        <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+          {{ content_for_additional_checkout_buttons }}
+        </div>
+        {%- endif -%}
+        {%- endcase -%}
         {% endfor %}
 
         <div id="cart-errors"></div>
@@ -79,22 +111,22 @@
 </div>
 
 {% javascript %}
-  class CartNote extends HTMLElement {
-    constructor() {
-      super();
+class CartNote extends HTMLElement {
+constructor() {
+super();
 
-      this.addEventListener('change', debounce((event) => {
-        const body = JSON.stringify({ note: event.target.value });
-        fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }});
-      }, 300))
-    }
-  }
+this.addEventListener('change', debounce((event) => {
+const body = JSON.stringify({ note: event.target.value });
+fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }});
+}, 300))
+}
+}
 
-  customElements.define('cart-note', CartNote);
+customElements.define('cart-note', CartNote);
 {% endjavascript %}
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     function isIE() {
       const ua = window.navigator.userAgent;
       const msie = ua.indexOf('MSIE ');
@@ -108,7 +140,7 @@
     cartSubmitInput.setAttribute('name', 'checkout');
     cartSubmitInput.setAttribute('type', 'hidden');
     document.querySelector('#cart').appendChild(cartSubmitInput);
-    document.querySelector('#checkout').addEventListener('click', function(event) {
+    document.querySelector('#checkout').addEventListener('click', function (event) {
       document.querySelector('#cart').submit();
     });
   });
@@ -116,30 +148,30 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-cart-footer.name",
-  "class": "cart__footer-wrapper",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_cart_note",
-      "default": false,
-      "label": "t:sections.main-cart-footer.settings.show_cart_note.label"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "subtotal",
-      "name": "t:sections.main-cart-footer.blocks.subtotal.name",
-      "limit": 1
-    },
-    {
-      "type": "buttons",
-      "name": "t:sections.main-cart-footer.blocks.buttons.name",
-      "limit": 1
-    },
-    {
-      "type": "@app"
-    }
-  ]
+"name": "t:sections.main-cart-footer.name",
+"class": "cart__footer-wrapper",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_cart_note",
+"default": false,
+"label": "t:sections.main-cart-footer.settings.show_cart_note.label"
+}
+],
+"blocks": [
+{
+"type": "subtotal",
+"name": "t:sections.main-cart-footer.blocks.subtotal.name",
+"limit": 1
+},
+{
+"type": "buttons",
+"name": "t:sections.main-cart-footer.blocks.buttons.name",
+"limit": 1
+},
+{
+"type": "@app"
+}
+]
 }
 {% endschema %}
