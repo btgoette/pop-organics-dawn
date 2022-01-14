@@ -1,5 +1,139 @@
 {
-  "current": "Default",
+  "current": {
+    "colors_solid_button_labels": "#FFFFFF",
+    "colors_accent_1": "#3c7031",
+    "gradient_accent_1": "linear-gradient(50deg, rgba(53, 112, 52, 1) 4.676%, rgba(53, 130, 37, 1) 23%, rgba(54, 128, 53, 1) 49.281%, rgba(26, 112, 26, 1) 85%)",
+    "colors_accent_2": "#ad8f43",
+    "colors_text": "#121212",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#FFFFFF",
+    "gradient_background_1": "",
+    "colors_background_2": "#fff",
+    "gradient_background_2": "linear-gradient(46deg, rgba(232, 235, 226, 1), rgba(232, 235, 226, 1) 100%)",
+    "type_header_font": "alegreya_n7",
+    "type_body_font": "montserrat_n4",
+    "spacing_sections": 48,
+    "spacing_grid_vertical": 8,
+    "inputs_border_opacity": 55,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_blur": 0,
+    "card_style": "standard",
+    "card_border_thickness": 0,
+    "media_border_thickness": 0,
+    "badge_position": "top right",
+    "badge_corner_radius": 0,
+    "badge_sale_color_scheme": "accent-1",
+    "social_twitter_link": "https:\/\/twitter.com\/HolisticJohnson?fbclid=IwAR2uYxJyEIDktPtLBoxoe4F2kPFUn1IhlFolztiTNCYRM-O52rj_yk0WmPU",
+    "social_facebook_link": "https:\/\/www.facebook.com\/jjholisticnutritionaltherapy\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/jj.holisticnutritionaltherapy\/",
+    "favicon": "shopify:\/\/shop_images\/pop-organics-logo_8e084e3e-7bec-47f0-b28d-062e4e4b238a.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/pop-logo-side-text_1f43dcee-914b-475d-9932-d6333c4d2380.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_accent_color": "#3c7031",
+    "checkout_button_color": "#3c7031",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-0": {
+            "type": "announcement",
+            "settings": {
+              "text": "Welcome to our store",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-0"
+        ],
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "color_scheme": "background-1",
+          "logo": "shopify:\/\/shop_images\/pop-logo-side-text_1f43dcee-914b-475d-9932-d6333c4d2380.png",
+          "logo_width": 250,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": true,
+          "margin_bottom": 0
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-1": {
+            "type": "text",
+            "settings": {
+              "heading": "P.O.P. Organics",
+              "subtext": "<p>4645 Avon Ln, Suite 300<br\/>Frisco, TX 75033, USA<br\/><a href=\"tel:18006343363\">+1 800 634 3363<\/a><br\/><a href=\"mailto:support@jjholistichealth.com\">support@jjholistichealth.com<\/a><\/p>"
+            }
+          },
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Catalog",
+              "menu": "categories"
+            }
+          },
+          "0f14c81c-c01b-4bf2-81ea-9f0774a78583": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Information",
+              "menu": "policy-menu"
+            }
+          },
+          "4cbdac7e-8387-440f-ab10-7969dfbf6d22": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "main-menu"
+            }
+          }
+        },
+        "block_order": [
+          "footer-1",
+          "footer-0",
+          "0f14c81c-c01b-4bf2-81ea-9f0774a78583",
+          "4cbdac7e-8387-440f-ab10-7969dfbf6d22"
+        ],
+        "settings": {
+          "color_scheme": "accent-1",
+          "newsletter_enable": false,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true,
+          "margin_top": 0,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/pop-logo-side-text_ba5da08f-33a6-434e-a58a-14f53abe5f76.png",
+          "logo_max_width": 250,
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
     "Default": {
       "colors_solid_button_labels": "#FFFFFF",
@@ -24,7 +158,9 @@
           },
           "block_order": [
             "announcement-bar-0"
-          ]
+          ],
+          "settings": {
+          }
         }
       }
     },
@@ -41,21 +177,25 @@
       "sections": {
         "footer": {
           "type": "footer",
-          "settings": {
-            "color_scheme": "accent-1"
-          },
           "blocks": {
             "menu": {
-              "type": "link_list"
+              "type": "link_list",
+              "settings": {
+              }
             },
             "text": {
-              "type": "text"
+              "type": "text",
+              "settings": {
+              }
             }
           },
           "block_order": [
             "menu",
             "text"
-          ]
+          ],
+          "settings": {
+            "color_scheme": "accent-1"
+          }
         }
       }
     }

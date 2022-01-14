@@ -1,14 +1,65 @@
 {
   "sections": {
     "banner": {
-      "type": "main-collection-banner"
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
     },
     "product-grid": {
-      "type": "main-collection-product-grid"
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1642196064fc2dca59": {
+      "type": "newsletter",
+      "blocks": {
+        "1642196064693ba6e3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join Our Email List"
+          }
+        },
+        "1642196064693ba6e3-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "1642196064693ba6e3-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "1642196064693ba6e3-0",
+        "1642196064693ba6e3-1",
+        "1642196064693ba6e3-2"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "1642196064fc2dca59"
   ]
 }
