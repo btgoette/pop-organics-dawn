@@ -29,7 +29,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/pop-body-butter.png",
-        "image_2": "shopify:\/\/shop_images\/pop-cbd-oil_125c4d5e-a010-48fd-b7f4-c4982869f4ad.png",
+        "image_2": "shopify:\/\/shop_images\/pop-cbd-oil.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
@@ -73,7 +73,7 @@
         "16421917762a230c5d-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pop-organics-family-hero-900x900.png",
+        "image": "shopify:\/\/shop_images\/pop-organics-family-hero.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
