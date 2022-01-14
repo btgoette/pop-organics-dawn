@@ -7,7 +7,7 @@
     "colors_outline_button_labels": "#121212",
     "colors_background_1": "#FFFFFF",
     "colors_background_2": "#fff",
-    "gradient_background_2": "radial-gradient(rgba(252, 243, 185, 1) 14.029%, rgba(252, 243, 185, 1) 85%)",
+    "gradient_background_2": "linear-gradient(360deg, rgba(53, 112, 52, 1) 50%, rgba(228, 205, 165, 1) 50%)",
     "type_header_font": "alegreya_n7",
     "type_body_font": "montserrat_n4",
     "inputs_border_opacity": 55,
