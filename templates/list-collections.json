@@ -3,11 +3,47 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
+        "title": "Collections",
+        "sort": "alphabetical",
         "image_ratio": "square"
+      }
+    },
+    "1642196191533e5134": {
+      "type": "newsletter",
+      "blocks": {
+        "1642196191afc18238-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join Our Email List"
+          }
+        },
+        "1642196191afc18238-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "1642196191afc18238-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "1642196191afc18238-0",
+        "1642196191afc18238-1",
+        "1642196191afc18238-2"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1642196191533e5134"
   ]
 }
