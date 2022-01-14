@@ -76,12 +76,20 @@
               "heading": "Information",
               "menu": "policy-menu"
             }
+          },
+          "4cbdac7e-8387-440f-ab10-7969dfbf6d22": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "main-menu"
+            }
           }
         },
         "block_order": [
           "footer-1",
           "footer-0",
-          "0f14c81c-c01b-4bf2-81ea-9f0774a78583"
+          "0f14c81c-c01b-4bf2-81ea-9f0774a78583",
+          "4cbdac7e-8387-440f-ab10-7969dfbf6d22"
         ],
         "settings": {
           "color_scheme": "accent-1",
