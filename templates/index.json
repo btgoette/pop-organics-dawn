@@ -17,8 +17,8 @@
             "button_label_1": "Bath & Body",
             "button_link_1": "shopify:\/\/collections\/shampoo-body-wash",
             "button_style_secondary_1": false,
-            "button_label_2": "Shop CBD Oil",
-            "button_link_2": "shopify:\/\/collections\/cbd",
+            "button_label_2": "",
+            "button_link_2": "",
             "button_style_secondary_2": false
           }
         }
@@ -29,7 +29,6 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/pop-body-butter.png",
-        "image_2": "shopify:\/\/shop_images\/pop-cbd-oil.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
