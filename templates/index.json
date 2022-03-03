@@ -185,7 +185,6 @@
     },
     "16421921371b5654e4": {
       "type": "newsletter",
-      "disabled": true,
       "blocks": {
         "1642192137a21c1245-0": {
           "type": "heading",
