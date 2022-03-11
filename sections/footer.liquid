@@ -208,6 +208,11 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
       </ul>
       {%- endif -%}
     </div>
+    
+    <div>
+      <p class="footer__disclaimer"><sup>&dagger;</sup>{{ 'sections.footer.disclaimer' | t }}
+      </p>
+    </div>
   </div>
   {%- endif -%}
 
@@ -329,11 +334,6 @@ padding-bottom: {{ section.settings.padding_bottom }}px;
           <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url
             }}</small>
           <small class="copyright__content">{{ powered_by_link }}</small>
-        </div>
-
-        <div>
-          <p class="footer__disclaimer"><sup>&dagger;</sup>{{ 'sections.footer.disclaimer' | t }}
-          </p>
         </div>
       </div>
     </div>
