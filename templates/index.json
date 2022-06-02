@@ -14,10 +14,10 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Bath & Body",
-            "button_link_1": "shopify:\/\/collections\/shampoo-body-wash",
+            "button_label_1": "",
+            "button_link_1": "",
             "button_style_secondary_1": false,
-            "button_label_2": "CBD Oil",
+            "button_label_2": "1500 CBD Oi Full Spectrum",
             "button_link_2": "shopify:\/\/products\/cbd-full-spectrum-1500mg",
             "button_style_secondary_2": false
           }
@@ -28,12 +28,11 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pop-body-butter.png",
         "image_2": "shopify:\/\/shop_images\/pop-cbd-oil.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "bottom-left",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "accent-1",
